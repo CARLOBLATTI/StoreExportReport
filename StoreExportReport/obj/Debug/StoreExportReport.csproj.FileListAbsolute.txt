@@ -1,0 +1,14 @@
+C:\Users\Carlo\source\repos\StoreExportReport\bin\Debug\StoreExportReport.exe.config
+C:\Users\Carlo\source\repos\StoreExportReport\bin\Debug\StoreExportReport.exe
+C:\Users\Carlo\source\repos\StoreExportReport\bin\Debug\StoreExportReport.pdb
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.csproj.AssemblyReference.cache
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.csproj.SuggestedBindingRedirects.cache
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.Properties.Resources.resources
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.Upload.resources
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.csproj.GenerateResource.cache
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.csproj.CoreCompileInputs.cache
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.exe
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.pdb
+C:\Users\Carlo\source\repos\StoreExportReport\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Carlo\source\repos\StoreExportReport\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Carlo\source\repos\StoreExportReport\obj\Debug\StoreExportReport.csproj.CopyComplete
