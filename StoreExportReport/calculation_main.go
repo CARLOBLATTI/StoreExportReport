@@ -13,6 +13,7 @@ import (
 	"time"
 )
 
+// struct per mappare la singola riga
 type SingleTicket struct {
 	Categoria    string
 	Descrizione  string
@@ -28,6 +29,7 @@ type SingleTicket struct {
 	Quantita     int
 }
 
+// struct per mappare il report
 type MainReport struct {
 	Nome_Negozio        string
 	Numero_Prodotti     int
@@ -37,6 +39,7 @@ type MainReport struct {
 	Scontrini           []SingleTicket
 }
 
+// Funzione per leggere il file csv
 func readCsvFile(filePath string) [][]string {
 	f, err := os.Open(filePath)
 	if err != nil {
@@ -55,6 +58,7 @@ func readCsvFile(filePath string) [][]string {
 	return records
 }
 
+// Funzione per generare il report
 func generateReport(records [][]string) MainReport {
 
 	leg := len(records)

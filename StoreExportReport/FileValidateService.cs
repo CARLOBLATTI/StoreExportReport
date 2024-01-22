@@ -6,8 +6,10 @@ namespace StoreExportReport
     //10 colonne separate da ;
     //Prima riga nome negozio
     //Ultima riga numero righe prodotto
+    //guardare documento per specifiche controlli campi
     internal class FileValidateService
     {
+        //Validazione estensione file
         public Boolean validateFileExtension(String extension)
         {
             Boolean result = false;
@@ -19,6 +21,7 @@ namespace StoreExportReport
             return result;
         }
 
+        //validazione prima riga del file che deve contenere solo il nome del negozio
         public Boolean validateFirstLine(String firstLine)
         {
             Boolean result = true;
@@ -31,6 +34,7 @@ namespace StoreExportReport
             }
             return result;
         }
+        //validazione ultima riga che deve contenere il numero di righe prodotti 
         public Boolean validateLastLine(String lastLine)
         {
             Boolean result = true;
@@ -45,6 +49,7 @@ namespace StoreExportReport
             result = validateInteger(lastLine);
             return result;
         }
+        //validazione delle righe prodotti e dei campi che contengono
         public Boolean validateGenericLine(String genericLine, int lineNumber, Company company)
         {
             Boolean result = true;
@@ -58,7 +63,7 @@ namespace StoreExportReport
             }
 
             //1 id società
-            if(!validateInteger(genericLineSplitted[0]) || !genericLineSplitted[0].Equals(company.CompanyId))
+            if (!validateInteger(genericLineSplitted[0]) || !genericLineSplitted[0].Equals(company.CompanyId))
             {
                 Console.WriteLine("Wrong data format for society's id");
                 result = false;
@@ -102,7 +107,6 @@ namespace StoreExportReport
                 result = false;
             }
             //6 ora
-            //TODO fix this
             if (DateTime.TryParseExact(genericLineSplitted[5], formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out timeTemp))
             {
                 Console.WriteLine("Valid time format");
@@ -162,7 +166,7 @@ namespace StoreExportReport
             }
             return result;
         }
-
+        //validazione dello shop id rispetto a quello del file di configurazione
         private Boolean validateShopId(String shopId, String[] shopsId)
         {
             Boolean result = true;
@@ -174,6 +178,7 @@ namespace StoreExportReport
             return result;
         }
 
+        //validazione del campo prezzo utilizzando regex
         private Boolean validatePrice(String price)
         {
             Boolean result = Regex.Match(price, @"^[0-9]{0,6}(\.[0-9]{2})?$").Success;
